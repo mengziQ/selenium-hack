@@ -25,9 +25,9 @@ while True:
     WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.NAME, 'rbselect')))
     WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.NAME, 'punch')))
     
-    if sys.argv(1) == "--in":
+    if sys.argv[1] == "--in":
       driver.execute_script("parent.f1.document.getElementsByName('rbselect').item(0).value = 1;")
-    elif sys.argv(1) == "--out":
+    elif sys.argv[1] == "--out":
       driver.execute_script("parent.f1.document.getElementsByName('rbselect').item(0).value = 2;")
     else:
       print('please enter argument: "--in", "--out"')
