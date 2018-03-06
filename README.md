@@ -1,7 +1,7 @@
 # selenium-hack
 seleniumを使ったいろんなプログラムをまとめています。  
 
-## cv-counter  
+## pv-counter  
 特定のURLのPV数を回すプログラム。  
 
 ## automatic-input  
