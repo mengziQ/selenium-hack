@@ -14,7 +14,7 @@ while True:
     driver = webdriver.Chrome(chrome_options=options, executable_path="C:\\02.drivers\\chrome_webdriver\\chromedriver.exe")
 
     # page 1
-    driver.get("https://xxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+    driver.get("https://xxxxxxxxxxxxxxxx")
     driver.switch_to.frame("f1")
     driver.find_element_by_name("DataSource").send_keys("xxxxx")
     driver.find_element_by_name("LoginID").send_keys("yyyyy")
@@ -25,9 +25,9 @@ while True:
     WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.NAME, 'rbselect')))
     WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.NAME, 'punch')))
     
-    if sys.argv(1) == "--in":
+    if sys.argv[1] == "--in":
       driver.execute_script("parent.f1.document.getElementsByName('rbselect').item(0).value = 1;")
-    elif sys.argv(1) == "--out":
+    elif sys.argv[1] == "--out":
       driver.execute_script("parent.f1.document.getElementsByName('rbselect').item(0).value = 2;")
     else:
       print('please enter argument: "--in", "--out"')
