@@ -14,7 +14,7 @@ while True:
     driver = webdriver.Chrome(chrome_options=options, executable_path="C:\\02.drivers\\chrome_webdriver\\chromedriver.exe")
 
     # page 1
-    driver.get("https://cl.i-abs.co.jp/e-clocking/login.asp")
+    driver.get("https://xxxxxxxxxxxxxxxx")
     driver.switch_to.frame("f1")
     driver.find_element_by_name("DataSource").send_keys("xxxxx")
     driver.find_element_by_name("LoginID").send_keys("yyyyy")
