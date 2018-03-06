@@ -8,9 +8,9 @@
 
 
 ## 実装でつまったところ  
-1. body内にフレームが複数ある場合、該当のフレームまで移動しないと要素を取得できない。  
+1. フレームが複数ある場合、該当のフレームまで移動しないと要素を取得できない。  
 ```
-driver.switch_to.frame("f1")
+driver.switch_to.frame("Frame Name")
 ```
 
 2. 要素のvalue属性を書き換えることはseleniumAPIではできない。これはjavascriptをselenium内で実行することによって実現できる。
