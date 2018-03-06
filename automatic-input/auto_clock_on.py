@@ -14,11 +14,11 @@ while True:
     driver = webdriver.Chrome(chrome_options=options, executable_path="C:\\02.drivers\\chrome_webdriver\\chromedriver.exe")
 
     # page 1
-    driver.get("https://cl.i-abs.co.jp/e-clocking/login.asp")
+    driver.get("https://xxxxxxxxxxxxxxxxxxxxxxxxxxxx")
     driver.switch_to.frame("f1")
-    driver.find_element_by_name("DataSource").send_keys("irepg")
-    driver.find_element_by_name("LoginID").send_keys("10001312")
-    driver.find_element_by_name("PassWord").send_keys("moeko08")
+    driver.find_element_by_name("DataSource").send_keys("xxxxx")
+    driver.find_element_by_name("LoginID").send_keys("yyyyy")
+    driver.find_element_by_name("PassWord").send_keys("zzzzz")
     driver.find_element_by_name("btnLogin").click()
   
     # page 2
