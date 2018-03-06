@@ -5,7 +5,7 @@
 driver.switch_to.frame("f1")
 ```
 
-2. 要素のvalue属性を書き換えることはseleniumAPIではできない。これはjavascriptをseleniumオブジェクト内で実行することによって実現できる。
+2. 要素のvalue属性を書き換えることはseleniumAPIではできない。これはjavascriptをselenium内で実行することによって実現できる。
 ```
 driver.execute_script("parent.f1.document.getElementsByName('xxxx').item(0).value = 1;")
 ```
