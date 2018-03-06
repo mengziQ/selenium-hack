@@ -39,6 +39,10 @@ while True:
     # page 3
     WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.NAME, 'OK')))
     driver.find_element_by_name("OK").click()
-  
+ 
+    # page 4
+    WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.ID, 'ok')))
+    driver.find_element_by_id("ok").click()
+    
     sys.exit()
 
