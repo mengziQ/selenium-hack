@@ -6,6 +6,9 @@ from selenium.webdriver.support import expected_conditions as ec
 from datetime import datetime
 import sys
 
+if len(sys.argv) == 1:
+  print("please enter an argument: '--in' or '--out'")
+  sys.exit()
 
 while True:
   if datetime.now().strftime('%X')[:5] == "11:24":
@@ -29,8 +32,6 @@ while True:
       driver.execute_script("parent.f1.document.getElementsByName('rbselect').item(0).value = 1;")
     elif sys.argv[1] == "--out":
       driver.execute_script("parent.f1.document.getElementsByName('rbselect').item(0).value = 2;")
-    else:
-      print('please enter argument: "--in", "--out"')
     
     print('rbselect:', driver.find_element_by_name("rbselect").get_attribute("value"))
     print('punch:', driver.find_element_by_name("punch"))
