@@ -16,8 +16,7 @@ selenium.common.exceptions.ElementNotVisibleException: Message: element not visi
 このとき、フォームが出てくる前の虫眼鏡とフォームが出てきてからの虫眼鏡が違う要素になっていて、しかも後者がinvisibleな要素だった。。  
 
 **解決方法**  
-send_scriptメソッドを使ってjavascriptでクリックを行う。  
-今回はCSSセレクタを使いたかったのでjQueryを使った。  
+send_scriptメソッドを使ってjavascriptでクリックを行う。今回はCSSセレクタを使いたかったのでjQueryを使った。  
 ```
 driver.execute_script("$('html > body > div.header > div.container > div.search-icon > form > div > button').click()")
 ```
