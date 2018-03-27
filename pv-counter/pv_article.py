@@ -3,10 +3,9 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from time import sleep
 
-options = Options()
-options.binary_location = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-
 for i in range(10):
+  options = Options()
+  options.binary_location = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
   driver = webdriver.Chrome(chrome_options=options, executable_path="C:\\chromedriver\\chromedriver.exe")
   driver.get("https://withonline.jp/")
   driver.find_elements_by_css_selector("html > body > div.header > div.container > div.search-icon > a > img")[0].click()
