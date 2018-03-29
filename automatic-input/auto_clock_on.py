@@ -7,21 +7,21 @@ from datetime import datetime
 import sys
 
 if len(sys.argv) == 1:
-  print("please enter an argument: '--in' or '--out'")
+  print('please enter argument: "--in", "--out"')
   sys.exit()
 
 while True:
-  if datetime.now().strftime('%X')[:5] == "11:24":
+  if datetime.now().strftime('%X')[:5] == "08:58": 
     options = Options()
-    options.binary_location = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-    driver = webdriver.Chrome(chrome_options=options, executable_path="C:\\02.drivers\\chrome_webdriver\\chromedriver.exe")
+    options.binary_location = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" 
+    driver = webdriver.Chrome(chrome_options=options, executable_path="C:\\02.drivers\\chrome_webdriver\\chromedriver.exe") 
 
     # page 1
-    driver.get("https://xxxxxxxxxxxxxxxx")
+    driver.get("https://cl.i-abs.co.jp/e-clocking/login.asp")
     driver.switch_to.frame("f1")
-    driver.find_element_by_name("DataSource").send_keys("xxxxx")
-    driver.find_element_by_name("LoginID").send_keys("yyyyy")
-    driver.find_element_by_name("PassWord").send_keys("zzzzz")
+    driver.find_element_by_name("DataSource").send_keys("irepg")
+    driver.find_element_by_name("LoginID").send_keys("10001312")
+    driver.find_element_by_name("PassWord").send_keys("moeko08")
     driver.find_element_by_name("btnLogin").click()
   
     # page 2
@@ -40,7 +40,7 @@ while True:
     # page 3
     WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.NAME, 'OK')))
     driver.find_element_by_name("OK").click()
- 
+    
     # page 4
     WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.ID, 'ok')))
     driver.find_element_by_id("ok").click()
